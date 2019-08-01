@@ -11,6 +11,6 @@
 ### 代码要点说明
 * 自定义LoginAuthenticationFilter，根据请求访问路径预处理设置loginUrl和successUrl;
 * 在ShiroConfiguration中配置LoginAuthenticationFilter为authc过滤器，配置/admin和/user开头的路径请求（除登录请求和登出请求）都由authc过滤器处理，且分别设置管理员权限和用户权限（"authc,roles[admin]", "authc,roles[user]"）;
-* 启动应用后，访问http://localhost:8080/admin/login，输入用户名密码admin/123456，进入adminIndex.html页面，尝试访问http://localhost:8080/user/index，显示无权限；
-* 同理，访问http://localhost:8080/user/login，输入用户名密码user/123456，进入userIndex.html页面，尝试访问http://localhost:8080/admin/index，显示无权限；
+* 启动应用后，访问http://localhost:8080/admin/login ， 输入用户名密码admin/123456，进入adminIndex.html页面，尝试访问http://localhost:8080/user/index ，显示无权限；
+* 同理，访问http://localhost:8080/user/login ，输入用户名密码user/123456，进入userIndex.html页面，尝试访问http://localhost:8080/admin/index ，显示无权限；
 
